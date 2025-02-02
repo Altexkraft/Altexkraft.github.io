@@ -34,7 +34,7 @@ function mostrarerror() {
     const divNombre = document.getElementById('nombre');
 
     async function obtenerDatosAlumno(cedula) {
-      divNombre.textContent = 'Cargando...'; // Mostrar indicador de carga
+      divNombre.textContent = 'Cargando...';
 
       try {
         const respuesta = await fetch(`${URL_BASE}/${cedula}`);
@@ -57,7 +57,6 @@ function mostrarerror() {
     function buscarAlumno() {
       const cedula = inputCedula.value;
 
-      // Validar la cédula (puedes agregar una validación más robusta)
       if (cedula.trim() === '') {
         alert('Por favor, ingrese la cédula del alumno.');
         return;
@@ -72,7 +71,7 @@ function mostrarerror() {
         const categoria = document.getElementById('categoria').value;
         const resultadosDiv = document.getElementById('resultados');
     
-        resultadosDiv.innerHTML = "<p>Cargando...</p>"; // Mensaje de carga
+        resultadosDiv.innerHTML = "<p>Cargando...</p>";
     
         try {
             const respuesta = await fetch('https://unefa6tosistemas2025api.onrender.com/api/articulos', {
@@ -99,7 +98,7 @@ function mostrarerror() {
                 if (listaProductos.length === 0) {
                     resultadosDiv.innerHTML = "<p>No se encontraron artículos para esta categoría.</p>";
                 } else {
-                    resultadosDiv.innerHTML = ""; // Limpiar mensaje de carga
+                    resultadosDiv.innerHTML = "";
     
                     listaProductos.forEach(producto => {
                         const articuloDiv = document.createElement('div');
