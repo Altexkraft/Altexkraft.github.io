@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet">
+    <title>pokedex</title>
+</head>
+<body>
+
+
+    <header class="contenedor">
+
+        <img src="logo.png" class="logo">
+
+        <label class="letra" for="cedula">Cédula:</label>
+        <input class="InputCe" type="text" id="cedula" placeholder="Ingrese la cédula del alumno">
+        <button class="BTN2" onclick="buscarAlumno()">Buscar</button>
+      
+  
+      
+        <label class= "letra" for="nombre">Dueño de la pagina:</label><br>
+        <div class="letra" id="nombre"></div> 
+
+
+        <div class="buscador">
+            <h1 class="letra">pokedex</h1>
+            <input class= "pokeInput" type="text" id="pokemon-input" placeholder="nombre o numero de pokemon">
+            <button onclick="buscarpokemon()" class="BTN">buscar pokemon</button>
+        </div>
+
+
+
+    </header>
+
+
+
+    <div class="pokeInfo" id="pokemon-info"></div>
+
+    <div class="buscador2">
+
+        <h1 class="letra">Consulta de Artículos</h1>
+
+        <label class= "letra" for="alumno">Alumno:</label>
+        <input class= "InputCa" type="text" id="alumno" value="XXXX"> <br><br>
+    
+        <label class= "letra" for="categoria">Categoría:</label>
+        <select id="categoria">
+            <option value="DEPORTE">Deporte</option>
+            <option value="HOGAR">Hogar</option>
+            <option value="TECNOLOGIA">Tecnología</option>
+            <option value="COMIDA">Comida</option>
+        </select> 
+        <button class="BTN3" onclick="obtenerArticulos()">Obtener Artículos</button>
+
+
+
+    </div>
+
+    <div class= "result" id="resultados"></div>
+
+ <script src="main.js"></script>
+</body>
+</html>
+
+
+ 
